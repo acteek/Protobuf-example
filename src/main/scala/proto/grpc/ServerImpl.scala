@@ -9,10 +9,6 @@ import Request.Body._
 
 class ServerImpl extends Greeter with StrictLogging {
 
-
-
-
-
   def sayHello(request: Request): Future[Response] = {
     logger.info("Receive request {}", request)
 
