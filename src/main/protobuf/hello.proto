@@ -1,25 +1,40 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.example.protos;
 
+/**
+ * Сообщения приветствия и прощания
+ *
+ * This file is really just an example. The data model is completely
+ * fictional.
+ */
 
-// The greeting service definition.
+
+/**
+ * Сервис Приветствия и прощания
+ */
 service Greeter {
-    // Sends a greeting
+    /// Обработать запрос
     rpc SayHello (Request) returns (Response) {}
 }
 
+/**
+ * Базовый контейнер для запросов к серверу
+ */
 message Request {
-    int32 id = 1;
+    required int32 id = 1 ; /// Id Запроса
     oneof body {
         HelloRequest hello = 2;
         ByeRequest bye = 3;
     }
 }
 
-
+/**
+ * Базовый контейнер для
+ *  ответов от сервера
+ */
 message Response {
-    int32 id = 1;
+    required int32 id = 1; // Id Запроса
     oneof body {
         HelloResponse hello = 2;
         ByeRequest bye = 3;
@@ -27,16 +42,22 @@ message Response {
 }
 
 
-// The request message containing the user's name.
-message HelloRequest {
-    string name = 2;
+
+message HelloRequest { /// Запрос приветсвия
+    required string name = 2;
 }
 
-message ByeRequest {
-    string name = 2;
+
+message ByeRequest { /// Запрос прощания
+    required string name = 2;
 }
 
-// The response message containing the greetings
+/// Ответ сервера на приветствие
 message HelloResponse {
-    string message = 1;
+    required string message = 1;
+}
+
+/// Ответ сервера на прощание
+message ByeResponse {
+    required string message = 1;
 }

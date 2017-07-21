@@ -15,14 +15,12 @@ class ServerImpl extends Greeter with StrictLogging {
     request.body match {
       case Hello(hello) =>
         Future.successful{
-          Response()
-            .withId(request.id)
+          Response(request.id)
             .withHello(HelloResponse(hello.name))
         }
       case Bye(by) =>
         Future.successful{
-          Response()
-            .withId(request.id)
+          Response(request.id)
             .withBye(ByeRequest(by.name))
         }
       case Empty =>

@@ -13,6 +13,9 @@ PB.targets in Compile := Seq(
     ) -> (sourceManaged in Compile).value
 )
 
+//PB.protocOptions in Compile := Seq("--doc_out=markdown,docs.md:/ *.proto")
+
+//docker run --rm -v $HOME/Develop/Protobuf-Test/src/main/protobuf:/src -v $HOME/Develop/Protobuf-Test:/docs bbrodriges/protoc-gen-doc sh -c "protoc --doc_out=markdown,docs.md:/docs *.proto"
 
 libraryDependencies ++= Seq(
   "com.trueaccord.scalapb" %% "scalapb-runtime" % com.trueaccord.scalapb.compiler.Version.scalapbVersion % "protobuf",
