@@ -17,8 +17,6 @@
 
 ## hello.proto
 
-
-
 <a name="com.example.protos.ByeRequest"/>
 
 ### ByeRequest
@@ -30,6 +28,7 @@
 
 
 <a name="com.example.protos.ByeResponse"/>
+
 ### ByeResponse
 Ответ сервера на прощание
 
@@ -39,6 +38,7 @@
 
 
 <a name="com.example.protos.HelloRequest"/>
+
 ### HelloRequest
 Запрос приветсвия
 
@@ -70,18 +70,15 @@
 
 
 <a name="com.example.protos.Response"/>
+
 ### Response
-Базовый контейнер для
- ответов от сервера
+Базовый контейнер для ответов от сервера
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | id | [int32](#int32) | required |  |
 | hello | [HelloResponse](#com.example.protos.HelloResponse) | optional |  |
 | bye | [ByeRequest](#com.example.protos.ByeRequest) | optional |  |
-
-
-
 
 
 <a name="com.example.protos.Greeter"/>
