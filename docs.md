@@ -20,6 +20,7 @@
 
 
 <a name="com.example.protos.ByeRequest"/>
+
 ### ByeRequest
 Запрос прощания
 
@@ -47,6 +48,7 @@
 
 
 <a name="com.example.protos.HelloResponse"/>
+
 ### HelloResponse
 Ответ сервера на приветствие
 
@@ -56,6 +58,7 @@
 
 
 <a name="com.example.protos.Request"/>
+
 ### Request
 Базовый контейнер для запросов к серверу
 
@@ -82,6 +85,7 @@
 
 
 <a name="com.example.protos.Greeter"/>
+
 ### Greeter
 Сервис Приветствия и прощания
 
@@ -92,6 +96,7 @@
 
 
 <a name="scalar-value-types"/>
+
 ## Scalar Value Types
 
 | .proto Type | Notes | C++ Type | Java Type | Python Type |
